@@ -5,6 +5,7 @@ let myserver = myhttp.createServer(
     let mytext;
     myresponse.writeHead(200, {"Content-Type": "text/plain"});
     if(myrequest.url === "/home") mytext="Welcome home!";
+    else if(myrequest.url == "/bye") mytext="Goodbye world!";
     else mytext="Hello world!";
     myresponse.end(mytext);
   }
